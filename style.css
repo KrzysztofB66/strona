@@ -1,0 +1,78 @@
+
+/* Mobile */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "A A"
+        "B B" 
+        "C D"
+        "E E"
+        "F F";
+
+    width: 100%;
+    min-height: 100vh;
+
+
+}
+
+.A {
+    grid-area: A;
+}
+
+.B {
+    grid-area: B;
+}
+
+.C {
+    grid-area: C;
+}
+
+.D {
+    grid-area: D;
+}
+
+.E {
+    grid-area: E;
+}
+
+.F {
+    grid-area: F;
+}
+
+
+.container > div {
+    border: 1px solid black;    
+    box-sizing: border-box;
+}
+
+
+
+/* Tablet  */
+
+
+@media (min-width: 600px) {
+    .container {
+        grid-template-areas:
+            "A A A"
+            "B B B"
+            "C D E"
+            "F F F";
+
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1200px) {
+    .container {
+        grid-template-areas:
+            "A A A A"
+            "B C D E"
+            "F F F F";
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
